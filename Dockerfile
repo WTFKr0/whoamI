@@ -10,5 +10,5 @@ RUN go build -a --installsuffix cgo --ldflags="-s" -o whoami
 FROM scratch
 COPY --from=builder /go/src/whoami/whoami /whoami
 ENTRYPOINT ["/whoami"]
-CMD ["-port", "-5000"]
+CMD ["-port", "5000"]
 EXPOSE 5000
